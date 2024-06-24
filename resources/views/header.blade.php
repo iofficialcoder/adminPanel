@@ -4026,9 +4026,16 @@
                             </div>
                             <!--end::Menu item-->
                             <!--begin::Menu item-->
+                            <!-- <div class="menu-item px-5">
+                                <a href="#" class="menu-link px-5">Sign Out</a>
+                            </div> -->
+
                             <div class="menu-item px-5">
-                                <a href="../../demo4/dist/authentication/flows/basic/sign-in.html"
-                                    class="menu-link px-5">Sign Out</a>
+                                <form action="{{ route('logout') }}" method="POST" class="menu-link px-5">
+                                    @csrf
+                                    <button type="submit" class="btn btn-link menu-link"
+                                        style="padding: 0 !important;">Sign Out</button>
+                                </form>
                             </div>
                             <!--end::Menu item-->
                         </div>

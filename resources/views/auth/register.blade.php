@@ -40,14 +40,15 @@
             <!--begin::Content-->
             <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
                 <!--begin::Logo-->
-                <a href="../../demo4/dist/index.html" class="mb-12">
+                <a href="{{ route('home') }}" class="mb-12">
                     <img alt="Logo" src="assets/media/logos/logo-1.svg" class="h-40px" />
                 </a>
                 <!--end::Logo-->
                 <!--begin::Wrapper-->
                 <div class="w-lg-600px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
                     <!--begin::Form-->
-                    <form class="form w-100" novalidate="novalidate" id="kt_sign_up_form">
+                    <form class="form w-100" novalidate="novalidate" method="POST" action="{{ route('register') }}">
+                        @csrf
                         <!--begin::Heading-->
                         <div class="mb-10 text-center">
                             <!--begin::Title-->
@@ -78,14 +79,14 @@
                             <div class="col-xl-6">
                                 <label class="form-label fw-bolder text-dark fs-6">First Name</label>
                                 <input class="form-control form-control-lg form-control-solid" type="text"
-                                    placeholder="" name="first-name" autocomplete="off" />
+                                    placeholder="" name="first_name" autocomplete="off" />
                             </div>
                             <!--end::Col-->
                             <!--begin::Col-->
                             <div class="col-xl-6">
                                 <label class="form-label fw-bolder text-dark fs-6">Last Name</label>
                                 <input class="form-control form-control-lg form-control-solid" type="text"
-                                    placeholder="" name="last-name" autocomplete="off" />
+                                    placeholder="" name="last_name" autocomplete="off" />
                             </div>
                             <!--end::Col-->
                         </div>
@@ -136,7 +137,7 @@
                         <div class="fv-row mb-5">
                             <label class="form-label fw-bolder text-dark fs-6">Confirm Password</label>
                             <input class="form-control form-control-lg form-control-solid" type="password"
-                                placeholder="" name="confirm-password" autocomplete="off" />
+                                placeholder="" name="password_confirmation" autocomplete="off" />
                         </div>
                         <!--end::Input group-->
                         <!--begin::Input group-->
@@ -150,7 +151,7 @@
                         <!--end::Input group-->
                         <!--begin::Actions-->
                         <div class="text-center">
-                            <button type="button" id="kt_sign_up_submit" class="btn btn-lg btn-primary">
+                            <button type="submit" class="btn btn-lg btn-primary">
                                 <span class="indicator-label">Submit</span>
                                 <span class="indicator-progress">Please wait...
                                     <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
@@ -187,7 +188,7 @@
     <script src="{{ asset('assets/js/scripts.bundle.js') }}"></script>
     <!--end::Global Javascript Bundle-->
     <!--begin::Page Custom Javascript(used by this page)-->
-    <script src="{{ asset('assets/js/custom/authentication/sign-up/general.js') }}"></script>
+    <!-- <script src="{{ asset('assets/js/custom/authentication/sign-up/general.js') }}"></script> -->
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
 </body>
