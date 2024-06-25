@@ -111,19 +111,19 @@
                             <div class="text-center text-muted text-uppercase fw-bolder mb-5">or</div>
                             <!--end::Separator-->
                             <!--begin::Google link-->
-                            <a href="{{ route('login.provider', ['provider' => 'google']) }}"
+                            <a href="{{ route('social.login', 'google') }}"
                                 class="btn btn-flex flex-center btn-light btn-lg w-100 mb-5">
                                 <img alt="Logo" src="assets/media/svg/brand-logos/google-icon.svg"
                                     class="h-20px me-3" />Continue with Google</a>
                             <!--end::Google link-->
                             <!--begin::Google link-->
-                            <a href="{{ route('login.provider', ['provider' => 'facebook']) }}"
+                            <a href="{{ route('social.login', 'facebook') }}"
                                 class="btn btn-flex flex-center btn-light btn-lg w-100 mb-5">
                                 <img alt="Logo" src="assets/media/svg/brand-logos/facebook-4.svg"
                                     class="h-20px me-3" />Continue with Facebook</a>
                             <!--end::Google link-->
                             <!--begin::Google link-->
-                            <a href="{{ route('login.provider', ['provider' => 'apple']) }}"
+                            <a href="{{ route('social.login', 'apple') }}"
                                 class="btn btn-flex flex-center btn-light btn-lg w-100">
                                 <img alt="Logo" src="assets/media/svg/brand-logos/apple-black.svg"
                                     class="h-20px me-3" />Continue with Apple</a>
